@@ -1,0 +1,29 @@
+{
+  "name": "wordle",
+  "version": "1.0.0",
+  "description": "Coursework for web dev module",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/svr.js"
+  },
+  "author": "<UP2025002@myport.ac.uk>",
+  "license": "ISC",
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "express": "^4.17.3",
+    "node-schedule": "^2.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.14.0",
+    "eslint-config-portsoc": "^1.0.0"
+  },
+  "eslintConfig": {
+    "extends": "portsoc",
+    "root": true,
+    "env": {
+      "browser": true
+    }
+  }
+}

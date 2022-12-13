@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+
+:root {
+    --fontfamily: 'Open Sans', sans-serif;
+    --textcolor: #ffffff;
+
+    --backgroundcolor: #121213;
+    
+    --boxcolor: #3A3A3C;
+    --keycolor: rgba(129, 131, 132, 1);
+    --keyhovercolor: rgba(129, 131, 132, 0.8);
+
+    --correctcolor: rgba(83, 141, 78, 1);
+    --correctcolorhover: rgba(83, 141, 78, 0.8);
+    --wrongpositioncolor: rgba(181, 159, 59, 1);
+    --wrongpositioncolorhover: rgba(181, 159, 59, 0.8);
+    --wrongcolor: rgba(58, 58, 60, 1);
+    --wrongcolorhover: rgba(58, 58, 60, 0.8);
+
+    --guesscolor: #121213;
+    --guessbordercolor: #565758;
+}
+
+
+.wrapper {
+    height: 100;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: var(--fontfamily);
+    color: var(--textcolor);
+    background-color: var(--backgroundcolor);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+    margin: 0;
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 90%;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+.headertitle {
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--boxcolor);
+}   
+
+.headerButton {
+    font-family: var(--fontfamily);
+    color: var(--textcolor);
+    background-color: var(--keycolor);
+    font-weight: bold;
+    padding: 1em;
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 2.5em;
+    min-width: 8em;
+    cursor: pointer;
+}
+
+.headerButton:hover {
+    background-color: var(--keyhovercolor);
+}
+
+/* Board */
+
+.wordbox {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.letterbox {
+    display: flex;
+    min-height: 3.5em;
+    min-width: 3.5em;
+    margin: 0.175em;
+    border: 0.125em solid var(--boxcolor);
+    border-radius: 0.5em;
+
+    font-family: var(--fontfamily);
+    font-weight: bold;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+/* Keyboard */
+
+#keyboard {
+    display: grid;
+    grid-template-columns: repeat(20, minmax(auto, 1.2em));
+    grid-auto-rows: 3.5em;
+    gap: 0.35em;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+
+
+.key {
+    font-family: var(--fontfamily);
+    grid-column: span 2;
+    background-color: var(--keycolor);
+    color: var(--textcolor);
+    font-weight: bold;
+    border-radius: 10%;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.key:hover {
+    background-color: var(--keyhovercolor);
+}
+
+.key.space {
+    grid-column: span 1;
+    background-color: var(--backgroundcolor);
+    border: none;
+    cursor: default;
+}
+
+.key.widekey {
+    grid-column: span 3;
+    image-resolution: 0.2em;
+}
+
+/* TOGGLES */
+
+.guess {
+    background-color: var(--guesscolor);
+    border-color: var(--guessbordercolor);
+}
+
+.wrong {
+    background-color: var(--wrongcolor);
+    border-color: var(--wrongcolor);
+}
+
+.key.wrong:hover {
+    background-color: var(--wrongcolorhover);
+}
+
+.wrongposition {
+    background-color: var(--wrongpositioncolor);
+    border-color: var(--wrongpositioncolor);
+}
+
+.key.wrongposition:hover {
+    background-color: var(--wrongpositioncolorhover);
+}
+
+.correct {
+    background-color: var(--correctcolor);
+    border-color: var(--correctcolor);
+}
+
+.key.correct:hover {
+    background-color: var(--correctcolorhover);
+}
+
+.textHidden {
+    color: transparent;
+}
+
+/* STATISTICS MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+  }
+
+.modalContent {
+    background-color: var(--backgroundcolor);
+    border: 1px solid var(--boxcolor);
+    border-radius: 1em;
+    margin: 15% auto; 
+    padding: 20px;
+    width: 60%; 
+  }
+  
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover {
+    color: var(--keyhovercolor);
+    text-decoration: none;
+    cursor: pointer;
+  }

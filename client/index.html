@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<head>
+      <title>Wordle</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+      <link rel="stylesheet" href="index.css" rel="stylesheet">
+      
+</head>
+
+<body>
+      <!-- HEADER -->
+      <header>
+            <button class="headerButton statisticsButton">Statistics</button>
+            <h1 class="headertitle">Wordle</h1>
+            <button class="headerButton hideLettersButton">Hide letters</button>
+            
+      </header>
+      
+      <!-- WORDLE BOARD -->
+      <div id="board">
+            <div id="word1" class="wordbox">
+                  <div id="letter1" class="letterbox"></div>
+                  <div id="letter2" class="letterbox"></div>
+                  <div id="letter3" class="letterbox"></div>
+                  <div id="letter4" class="letterbox"></div>
+                  <div id="letter5" class="letterbox"></div>
+            </div>
+
+            <div id="word2" class="wordbox">
+                  <div id="letter1" class="letterbox"></div>
+                  <div id="letter2" class="letterbox"></div>
+                  <div id="letter3" class="letterbox"></div>
+                  <div id="letter4" class="letterbox"></div>
+                  <div id="letter5" class="letterbox"></div>
+            </div>
+
+            <div id="word3" class="wordbox">
+                  <div id="letter1" class="letterbox"></div>
+                  <div id="letter2" class="letterbox"></div>
+                  <div id="letter3" class="letterbox"></div>
+                  <div id="letter4" class="letterbox"></div>
+                  <div id="letter5" class="letterbox"></div>
+            </div>
+
+            <div id="word4" class="wordbox">
+                  <div id="letter1" class="letterbox"></div>
+                  <div id="letter2" class="letterbox"></div>
+                  <div id="letter3" class="letterbox"></div>
+                  <div id="letter4" class="letterbox"></div>
+                  <div id="letter5" class="letterbox"></div>
+            </div>
+
+            <div id="word5" class="wordbox">
+                  <div id="letter1" class="letterbox"></div>
+                  <div id="letter2" class="letterbox"></div>
+                  <div id="letter3" class="letterbox"></div>
+                  <div id="letter4" class="letterbox"></div>
+                  <div id="letter5" class="letterbox"></div>
+            </div>
+
+            <div id="word6" class="wordbox">
+                  <div id="letter1" class="letterbox"></div>
+                  <div id="letter2" class="letterbox"></div>
+                  <div id="letter3" class="letterbox"></div>
+                  <div id="letter4" class="letterbox"></div>
+                  <div id="letter5" class="letterbox"></div>
+            </div>
+      </div>
+      
+      <!-- KEYBOARD -->
+      <div id="keyboard">
+            <button class="key">Q</button>
+            <button class="key">W</button>
+            <button class="key">E</button>
+            <button class="key">R</button>
+            <button class="key">T</button>
+            <button class="key">Y</button>
+            <button class="key">U</button>
+            <button class="key">I</button>
+            <button class="key">O</button>
+            <button class="key">P</button>
+            <button class="key space"></button>
+            <button class="key">A</button>
+            <button class="key">S</button>
+            <button class="key">D</button>
+            <button class="key">F</button>
+            <button class="key">G</button>
+            <button class="key">H</button>
+            <button class="key">J</button>
+            <button class="key">K</button>
+            <button class="key">L</button>
+            <button class="key space"></button>
+            <button class="key widekey">ENTER</button>
+            <button class="key">Z</button>
+            <button class="key">X</button>
+            <button class="key">C</button>
+            <button class="key">V</button>
+            <button class="key">B</button>
+            <button class="key">N</button>
+            <button class="key">M</button>
+            <button class="key widekey">UNDO</button>
+      </div>
+
+      <!-- STATISTICS MODAL -->
+      <div id="statisticsModal" class="modal">
+            <div class="modalContent">
+                  <span class="close">&times;</span>
+                  <div id="modalHeader">Statistics</div>
+                  <div id="modalPlayed">Played: 0</div>
+                  <div id="modalWinPercent">Win %: 0</div>
+                  <div id="modalCurrentStreak">Current Streak: 0</div>
+                  <div id="modalMaxStreak">Max Streak: 0</div>
+                  <div></div>
+            </div>
+
+      </div>
+      <script src="index.js"></script>
+</body>
